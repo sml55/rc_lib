@@ -9,27 +9,23 @@
 #
 echo "----------------------------"
 echo "i will overwrite this files:"
-ls | grep -v README | grep -v setup
+ls rc 
 echo "please quit with ^c if you have a problem with that or proceed with enter"
 echo "----------------------------"
 read input
 
 MYDIR=`pwd`
-for i in `ls`
+for i in `ls rc`
 do
-IS_MYSELF=`echo $i | grep "setup"`
-if [[ $IS_MYSELF == "" ]]
-then
-	echo "creating symlink for $i"
-	cd ~/
-	if [[ -e ".$i" ]]
-	then
-		echo "$i exists, removing....."
-		rm ".$i"
-	fi
-	ln -s $MYDIR/$i ".$i"
-	cd $MYDIR
-fi
+        echo "creating symlink for $i"
+        cd ~/
+        if [[ -e ".$i" ]]
+                then
+                echo "$i exists, removing....."
+                rm ".$i"
+        fi
+        ln -s $MYDIR/$i ".$i"
+        cd $MYDIR
 
 
 done

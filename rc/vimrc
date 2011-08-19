@@ -1,39 +1,40 @@
 
-
-
-" enable filetype plugin
-filetype plugin on
-filetype indent on
-
-"searching
-
-set hlsearch "Highlight search things
-set showmatch "Show matching bracets when text indicator is over them
-
-"display
-syntax enable "Enable syntax hl
-set ruler
-
-
-"tabbing
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set smarttab
-
-
-"copy and paste
-set clipboard+=unnamed " share windows clipboard
+"
+"options
+"
+syntax on       
+set number "zeilennummern
+set incsearch "schon bei eingabe anfangen zu suchen
+:filetype indent plugin on
+set ruler<
+set expandtab "lehrzeichen statt tabs
+set tabstop =2 
+set hlsearch "suche hervorheben
+set showmatch "anzeigen passender klammern etc
+set wildmode=longest:list,full "completion on fileopening
+set hidden "change buffer without saving
 
 "taglist
 let Tlist_WinWidth = 45 "breite
 let Tlist_Exit_OnlyWindow = 1 "vim beenden wenn taglist letztes fenster
 let Tlist_Use_Right_Window = 1 "taglist auf rechter seite
 let Tlist_Sort_Type = "name" "nach namen sortieren
-"else
-set nocompatible " explicitly get out of vi-compatible mode
-set foldenable
+"let Tlist_Auto_Open = 1
 
+"nerdtree
+"autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
+
+"
+"abbreviations and commands
+"
+:ab #p puts "\n\n\n\n\n\n\n\n\n\n\n\n"
+"pastemode with simple p
+:command PM set paste
+:command MP set nopaste
+
+"""""""""""""""""""""""""""""""""""
+"remaps
+"""""""""""""""""""""""""""""""""""
 
 "explorer
 
@@ -54,9 +55,7 @@ nnoremap <silent> <F8> :NERDTreeToggle <CR>
 nmap <F11> <Esc>:! ruby -c % 
 nmap <F12> <Esc>:Rake<cr>
 imap <F12> <Esc>:w<cr>:Rake<cr>
-"buffers"
-map <C-h> :bp <CR>
-map <C-l> :bn <CR> 
+
 
 " Edit another file in the same directory as the current file
 " " uses expression to extract path from current file's path
@@ -66,3 +65,8 @@ map <C-l> :bn <CR>
  else
    map ,e :e <C-R>=expand("%:p:h") . '\'<CR>
  endif
+
+"moving in buffers"
+map <C-h> :bp <CR>
+map <C-l> :bn <CR> 
+
