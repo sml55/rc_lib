@@ -9,7 +9,7 @@
 #
 echo "----------------------------"
 echo "i will overwrite this files:"
-ls
+ls | grep -v README | grep -v setup
 echo "please quit with ^c if you have a problem with that or proceed with enter"
 echo "----------------------------"
 read input
