@@ -1,0 +1,63 @@
+" Vim syntax file
+" Language:	HAML
+" Maintainer:	Jens Kraemer <jk@jkraemer.net>
+"
+" hacked together by ripping various parts off of eruby-mode and html-mode
+"
+" For version 5.x: Clear all syntax items
+" For version 6.x: Quit when a syntax file was already loaded
+if !exists("main_syntax")
+  if version < 600
+    syntax clear
+  elseif exists("b:current_syntax")
+    finish
+  endif
+  let main_syntax = 'haml'
+endif
+
+" don't use standard HiLink, it will not work with included syntax files
+if version < 508
+  command! -nargs=+ HamlHiLink hi link <args>
+else
+  command! -nargs=+ HamlHiLink hi def link <args>
+endif
+
+if version < 600
+  syn include @rubyTop <sfile>:p:h/ruby.vim
+else
+  syn include @rubyTop syntax/ruby.vim
+endif
+
+syn case ignore
+
+"
+" inline ruby and similar constructs like the html tag attributes hash
+"
+syn cluster erubyRegions contains=erubyOneLiner,hamlHtmlAttribs
+
+syn region  erubyOneLiner matchgroup=erubyDelimiter start="[=-]" end="$"  contains=@rubyTop containedin=ALLBUT,@erubyRegions keepend oneline
+syn region  hamlHtmlAttribs matchgroup=erubyDelimiter start="{" end="}"  contains=@rubyTop containedin=ALLBUT,@erubyRegions keepend oneline
+
+" html tags
+syn match   htmlTag     +^\s*%[a-z0-9]\++ 
+
+
+" The default highlighting.
+if version >= 508 || !exists("did_haml_syn_inits")
+  if version < 508
+    let did_haml_syn_inits = 1
+  endif
+  HamlHiLink htmlTag			Function
+  HamlHiLink erubyDelimiter		Delimiter
+  HamlHiLink erubyComment		Comment
+endif
+
+delcommand HamlHiLink
+
+let b:current_syntax = "haml"
+
+if main_syntax == 'haml'
+  unlet main_syntax
+endif
+
+" vim: ts=8
