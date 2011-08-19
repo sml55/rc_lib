@@ -2,6 +2,10 @@
 
 
 
+#VIMODE
+set -o vi
+
+
 #ALIASE
 
 #ls
