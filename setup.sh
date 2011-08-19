@@ -7,7 +7,12 @@
 #	THIS WILL DESTROY ANY FILE IN ~/ WITH THE SAME NAME AS A FILE IN 
 #	THE DIRECTORY setup.sh IS.
 #
-
+echo "----------------------------"
+echo "i will overwrite this files:"
+ls
+echo "please quit with ^c if you have a problem with that or proceed with enter"
+echo "----------------------------"
+read input
 
 MYDIR=`pwd`
 for i in `ls`
