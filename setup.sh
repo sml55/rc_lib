@@ -17,7 +17,14 @@ if [[ $IS_MYSELF == "" ]]
 then
 	echo "creating symlink for $i"
 	cd ~/
+	if [[ -e ".$i" ]]
+	then
+		echo "$i exists, removing....."
+		rm ".$i"
+	fi
 	ln -s $MYDIR/$i ".$i"
-	cd -
+	cd $MYDIR
 fi
+
+
 done
