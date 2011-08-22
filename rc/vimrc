@@ -8,7 +8,7 @@ set incsearch "schon bei eingabe anfangen zu suchen
 :filetype indent plugin on
 set ruler<
 set expandtab "lehrzeichen statt tabs
-set tabstop =2 
+set tabstop =4 
 set hlsearch "suche hervorheben
 set showmatch "anzeigen passender klammern etc
 set wildmode=longest:list,full "completion on fileopening

@@ -22,9 +22,9 @@ do
         if [[ -e ".$i" ]]
                 then
                 echo "$i exists, removing....."
-                rm ".$i"
+                rm  ".$i"
         fi
-        ln -s $MYDIR/$i ".$i"
+        ln -s $MYDIR/rc/$i ".$i"
         cd $MYDIR
 
 
