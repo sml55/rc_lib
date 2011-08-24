@@ -9,6 +9,7 @@ set -o vi
 #ALIASE
 
 alias start_selenium='java -jar /data/b.bellee/selenium-server-standalone-2.4.0.jar'
+alias start_vm_dev="VBoxManage startvm dev"
 
 
 #ls
@@ -19,6 +20,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+#cp
+alias cp='cp -iv'
 
 
 # don't put duplicate lines in the history. See bash(1) for more options

@@ -19,7 +19,7 @@ for i in `ls rc`
 do
         echo "creating symlink for $i"
         cd ~/
-        if [[ -e ".$i" ]]
+        if [[ -h ".$i"  || -e "$.i" ]]
                 then
                 echo "$i exists, removing....."
                 rm  ".$i"
