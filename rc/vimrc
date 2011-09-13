@@ -9,11 +9,23 @@ set incsearch "schon bei eingabe anfangen zu suchen
 set ruler<
 set expandtab "lehrzeichen statt tabs
 set tabstop =4 
+set shiftwidth =4 
 set hlsearch "suche hervorheben
 set showmatch "anzeigen passender klammern etc
 set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
 
+" Make me learn the keyboard
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop> 
+nnoremap j gj
+nnoremap k gk
 "taglist
 let Tlist_WinWidth = 45 "breite
 let Tlist_Exit_OnlyWindow = 1 "vim beenden wenn taglist letztes fenster
@@ -23,6 +35,17 @@ let Tlist_Sort_Type = "name" "nach namen sortieren
 
 "nerdtree
 "autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
+
+"phpdoc 
+
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
+
+"CtrlP
+let g:ctrlp_map = '<c-o>' 
+let g:ctrlp_working_path_mode = 2
+
 
 "
 "abbreviations and commands
