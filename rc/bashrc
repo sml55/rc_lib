@@ -25,7 +25,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 #cp
-alias cp='cp -iv'
+alias cp='cp -i'
 
 
 # don't put duplicate lines in the history. See bash(1) for more options

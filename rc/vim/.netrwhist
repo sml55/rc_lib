@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/twist/projects/rbdb/rbdb/app/controllers/project/jugendweihe'
-let g:netrw_dirhist_2='/home/twist/projects/rbdb/rbdb/app/views/project/jugendweihe/master'
-let g:netrw_dirhist_3='/data/b.bellee/projects/unister-testing/utt/trunk/frontend/app/src/App'
-let g:netrw_dirhist_4='/data/b.bellee/projects/unister-testing/utt/trunk/lib/Unister/Testing/Db/Table'
+let g:netrw_dirhist_1='/data/b.bellee/vshare/git/unister-testing/utt/frontend/app/src/App'
+let g:netrw_dirhist_2='/data/b.bellee/vshare/git/Unister/testing/library/Unister/Testing/Helper/Seo'
+let g:netrw_dirhist_3='/data/b.bellee/vshare/git/Unister/testing/library/Unister/Testing/Task/Testing'
+let g:netrw_dirhist_4='/data/b.bellee/vshare/preisvergleich/Acceptance/config'

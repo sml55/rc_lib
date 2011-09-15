@@ -26,12 +26,7 @@ inoremap <left> <nop>
 inoremap <right> <nop> 
 nnoremap j gj
 nnoremap k gk
-"taglist
-let Tlist_WinWidth = 45 "breite
-let Tlist_Exit_OnlyWindow = 1 "vim beenden wenn taglist letztes fenster
-let Tlist_Use_Right_Window = 1 "taglist auf rechter seite
-let Tlist_Sort_Type = "name" "nach namen sortieren
-"let Tlist_Auto_Open = 1
+"tagbar
 
 "nerdtree
 "autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
@@ -65,15 +60,15 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 
 " taglist
-nnoremap <silent> <F7> :TlistToggle<CR>
+nnoremap <silent> <F7> :TagbarToggle<CR>
 
 " nerdtree 
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
 
-" folding
-:map <F5> <Esc>zf/end<cr>
-:map <F6> <Esc>zo
-
+" php folding
+ map <F5> <Esc>:EnableFastPHPFolds<Cr> 
+  map <F6> <Esc>:EnablePHPFolds<Cr> 
+   map <F7> <Esc>:DisablePHPFolds<Cr> 
 " Rails
 nmap <F11> <Esc>:! ruby -c % 
 nmap <F12> <Esc>:Rake<cr>
