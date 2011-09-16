@@ -90,7 +90,7 @@ git_prompt ()
  
     echo "$git_color$git_branch${c_reset}"
 }
-PS1="[(\u@\H)--(\w)--(`date '+%d.%m.%y %M:%H'`)--(`git_prompt`)]\n[\!] "
+PS1="[(\u@\H)--(\w)--(`date '+%d.%m.%y %H:%M'`)--(`git_prompt`)]\n[\!] "
 
 #
 #if [ "$color_prompt" = yes ]; then
