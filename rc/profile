@@ -1,2 +1,2 @@
 
-export SHELL=/bin/bash
+export SHELL=/bin/zsh

@@ -2,7 +2,7 @@
 
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list 'r:|[._-]=** r:|=**' 'r:|[._-]=** r:|=**'
-zstyle :compinstall filename '/home/b.bellee/.zshrc'
+#zstyle :compinstall filename '/home/b.bellee/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -14,4 +14,22 @@ SAVEHIST=1000
 setopt appendhistory extendedglob
 unsetopt beep
 bindkey -v
+
 # End of lines configured by zsh-newuser-install
+#
+
+setopt auto_list
+unsetopt menucomplete
+bindkey '^R' history-incremental-search-backward
+skip_global_compinit=1
+
+precmd()
+{
+git_branch=`git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/(\1) /'`
+export git_branch=$git_branch
+}
+#PS1
+setopt promptsubst
+setopt PROMPT_SUBST
+PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--$git_branch 
+[%!]> '
