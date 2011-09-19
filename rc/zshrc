@@ -18,10 +18,47 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 #
 
+
+#ALIASE
+
+#apps
+alias start_selenium='java -jar /data/b.bellee/selenium-server-standalone-2.4.0.jar'
+alias start_vm_dev="VBoxManage startvm dev"
+
+#directories
+alias cd_utt='cd ~/projects/vmware/git/unister-testing/utt'
+alias cd_unister_lib='cd ~/projects/vmware/git/Unister'
+
+#zshrcedit
+alias editzsh='vim ~/.zshrc; source ~/.zshrc'
+
+#git
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias ga='git add'
+
+#ls
+alias ll='ls -lisa'
+
+#cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+#cp
+alias cp='cp -i'
+
+setopt noautomenu
 setopt auto_list
 unsetopt menucomplete
 bindkey '^R' history-incremental-search-backward
 skip_global_compinit=1
+
+#history up and down
+bindkey "\e[A" up-line-or-history
+bindkey '\e[B' down-line-or-history
+
 
 precmd()
 {
