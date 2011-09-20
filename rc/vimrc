@@ -65,10 +65,6 @@ nnoremap <silent> <F7> :TagbarToggle<CR>
 " nerdtree 
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
 
-" php folding
- map <F5> <Esc>:EnableFastPHPFolds<Cr> 
-  map <F6> <Esc>:EnablePHPFolds<Cr> 
-   map <F7> <Esc>:DisablePHPFolds<Cr> 
 " Rails
 nmap <F11> <Esc>:! ruby -c % 
 nmap <F12> <Esc>:Rake<cr>
