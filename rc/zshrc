@@ -59,6 +59,9 @@ skip_global_compinit=1
 bindkey "\e[A" up-line-or-history
 bindkey '\e[B' down-line-or-history
 
+#path
+PATH=$PATH:~/bin
+
 
 precmd()
 {
