@@ -8,14 +8,6 @@ set -o vi
 
 #ALIASE
 
-#apps
-alias start_selenium='java -jar /data/b.bellee/selenium-server-standalone-2.4.0.jar'
-alias start_vm_dev="VBoxManage startvm dev"
-
-#directories
-alias cd_utt='cd ~/projects/vmware/git/unister-testing/utt'
-alias cd_unister_lib='cd ~/projects/vmware/git/Unister'
-
 #ls
 alias ll='ls -lisa'
 
