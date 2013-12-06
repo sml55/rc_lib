@@ -1,6 +1,8 @@
 
 
 
+#UTF8 for ruby
+export RUBYOPT=-Ku
 
 #VIMODE
 set -o vi
@@ -25,7 +27,11 @@ alias cp='cp -i'
 HISTCONTROL=ignoredups:ignorespace
 
 #my bin
-PATH="$PATH:bin"
+PATH="$PATH:$HOME/bin"
+#android tools
+PATH="$PATH:$HOME/bin/android-sdk-linux/tools"
+PATH="$PATH:$HOME/bin/android-sdk-linux/platform-tools"
+PATH="$PATH:$HOME/bin/android-sdk-linux/build-tools"
 # append to the history file, don't overwrite it
 shopt -s histappend
 
