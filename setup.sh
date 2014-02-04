@@ -21,8 +21,8 @@ do
         cd ~/
         if [[ -h ".$i"  || -e ".$i" ]]
                 then
-                echo "$i exists, removing....."
-                rm  ".$i"
+                echo "$i exists, i am moving it to /tmp/${i}_backup"
+                mv  ".$i /tmp/${i}_backup"
         fi
         ln -s $MYDIR/rc/$i ".$i"
         cd $MYDIR
