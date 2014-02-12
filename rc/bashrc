@@ -54,6 +54,10 @@ fi
 # VIM for ever!
 export EDITOR=vim
 
+#CAPSLOCK IS FOR SUCKERS
+xmodmap -e 'keycode 66 = F1'
+xmodmap -e 'clear Lock'
+
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
