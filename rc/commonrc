@@ -1,0 +1,31 @@
+
+#ALIASE
+
+
+#zshrcedit
+alias editzsh='vim ~/.zshrc; source ~/.zshrc'
+alias editbash='vim ~/.bashrc; source ~/.zshrc'
+
+#git
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias ga='git add'
+
+#ls
+alias ll='ls -lisa'
+
+#cd
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+#cp
+alias cp='cp -i'
+
+#UTF8 for ruby
+export RUBYOPT=-Ku
+
+#VIMODE
+set -o vi
+

@@ -19,35 +19,6 @@ bindkey -v
 #
 
 
-#ALIASE
-
-#apps
-alias start_selenium='java -jar /data/b.bellee/selenium-server-standalone-2.4.0.jar'
-alias start_vm_dev="VBoxManage startvm dev"
-
-#directories
-alias cd_utt='cd ~/projects/vmware/git/unister-testing/utt'
-alias cd_unister_lib='cd ~/projects/vmware/git/Unister'
-
-#zshrcedit
-alias editzsh='vim ~/.zshrc; source ~/.zshrc'
-
-#git
-alias gs='git status'
-alias gc='git commit'
-alias gd='git diff'
-alias ga='git add'
-
-#ls
-alias ll='ls -lisa'
-
-#cd
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-#cp
-alias cp='cp -i'
 
 setopt noautomenu
 setopt auto_list
@@ -79,3 +50,6 @@ setopt promptsubst
 setopt PROMPT_SUBST
 PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--$git_branch 
 [%!]> '
+
+
+source .commonrc

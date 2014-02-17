@@ -1,25 +1,6 @@
 
 
 
-#UTF8 for ruby
-export RUBYOPT=-Ku
-
-#VIMODE
-set -o vi
-
-
-#ALIASE
-
-#ls
-alias ll='ls -lisa'
-
-#cd
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-#cp
-alias cp='cp -i'
 
 
 # don't put duplicate lines in the history. See bash(1) for more options
@@ -102,6 +83,7 @@ PS1="[(\u@\H)--(\w)--(`date '+%d.%m.%y %H:%M'`)--(`git_prompt`)]\n[\!] "
 #if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #else
+
 #    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 #fi
 #unset color_prompt force_color_prompt
@@ -142,3 +124,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+
+source .commonrc
