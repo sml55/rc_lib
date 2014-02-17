@@ -30,6 +30,9 @@ export RUBYOPT=-Ku
 set -o vi
 
 
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=99999999
+HISTFILESIZE=10000
 
 
 function fbn () {

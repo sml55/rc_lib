@@ -9,8 +9,6 @@ compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
 setopt appendhistory extendedglob
 unsetopt beep
 bindkey -v
@@ -29,16 +27,6 @@ skip_global_compinit=1
 #history up and down
 bindkey "\e[A" up-line-or-history
 bindkey '\e[B' down-line-or-history
-
-#path
-PATH=$PATH:~/bin
-JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0/"
-
-
-#android tools
-PATH="$PATH:$HOME/bin/android-sdk-linux/tools"
-PATH="$PATH:$HOME/bin/android-sdk-linux/platform-tools"
-PATH="$PATH:$HOME/bin/android-sdk-linux/build-tools"
 
 precmd()
 {
