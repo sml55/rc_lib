@@ -29,3 +29,13 @@ export RUBYOPT=-Ku
 #VIMODE
 set -o vi
 
+
+
+
+function fbn () {
+
+find ./ -iname $1
+
+
+
+}
