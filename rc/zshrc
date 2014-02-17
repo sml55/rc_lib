@@ -52,4 +52,4 @@ PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--$git_branch
 [%!]> '
 
 
-source .commonrc
+source ~/.commonrc
