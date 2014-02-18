@@ -1,6 +1,7 @@
 
+#
 #ALIASE
-
+#
 
 #zshrcedit
 alias editzsh='vim ~/.zshrc; source ~/.zshrc'
@@ -23,22 +24,33 @@ alias ....='cd ../../..'
 #cp
 alias cp='cp -i'
 
+#
+# Variables
+#
+
 #UTF8 for ruby
 export RUBYOPT=-Ku
 
+
+#
+# settings
+#
+
 #VIMODE
 set -o vi
-
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=99999999
 HISTFILESIZE=10000
 
 
+#
+# functions
+#
 function fbn () {
-
-find ./ -iname $1
-
-
-
+  find ./ -iname "*$1*"
+}
+function run () 
+{
+  $* &
 }
