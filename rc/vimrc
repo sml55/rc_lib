@@ -63,7 +63,8 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 
 " taglist
-nnoremap <silent> <F7> :TagbarToggle<CR>
+nnoremap <silent> <F7> :TagbarToggle<CR> <C-j>
+let Tlist_GainFocus_on_ToggelOpen = 1 
 
 " nerdtree 
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
