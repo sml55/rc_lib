@@ -31,11 +31,8 @@ nnoremap k gk
 "nerdtree
 "autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
 
-"phpdoc 
-
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-P> :call PhpDocSingle()<CR>
-vnoremap <C-P> :call PhpDocRange()<CR> 
+nnoremap <C-P> :bp <CR>
+vnoremap <C-N> :bn <CR> 
 
 "CtrlP
 let g:ctrlp_map = '<c-o>' 
