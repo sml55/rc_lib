@@ -31,13 +31,17 @@ alias cp='cp -i'
 #UTF8 for ruby
 export RUBYOPT=-Ku
 
+#VIM!
+export GIT_EDITOR=vim
+export VISUAL=vim
+export EDITOR=vim
 
 #
 # settings
 #
 
 #VIMODE
-set -o vi
+#set -o vi
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=99999999
