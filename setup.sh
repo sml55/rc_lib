@@ -11,6 +11,7 @@ echo "----------------------------"
 echo "i will overwrite this files:"
 ls rc 
 echo "please quit with ^c if you have a problem with that or proceed with enter"
+echo "use your .profile for machine specific configurations"
 echo "----------------------------"
 read input
 
