@@ -2,4 +2,4 @@
 noremap j 7j
 noremap k 7k
 set browser.tabs.closeWindowWithLastTab=false
-set defaultsearch=duckduckgo
+set defsearch=duckduckgo
