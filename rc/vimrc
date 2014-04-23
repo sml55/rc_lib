@@ -14,6 +14,19 @@ set hlsearch "suche hervorheben
 set showmatch "anzeigen passender klammern etc
 set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
+
+
+"rechtschreibung
+
+" Rechtschreibung Wörterbücher: ftp://ftp.vim.org/pub/vim/runtime/spell/
+set spelllang=de,en     " Mehrere Sprachen
+set spellsuggest=5      " Max NN Korrekturen vorschlagen
+                        " Cursor auf Wort platzieren und z= eintippen 
+
+"set spell              " Rechtschreibprüfung für alle Dateien einschalten
+" oder: nur für bestimmte Dateitypen (Wir aktivieren spell nur für den lokalen
+" Buffer)
+au BufNewFile,BufRead *.md setlocal spell
 "set foldmethod=syntax
 
 " Make me learn the keyboard
@@ -27,7 +40,9 @@ inoremap <left> <nop>
 inoremap <right> <nop> 
 nnoremap j gj
 nnoremap k gk
-"tagbar
+
+
+
 
 "nerdtree
 "autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
