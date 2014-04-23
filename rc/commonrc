@@ -3,9 +3,10 @@
 #ALIASE
 #
 
-#zshrcedit
+#rcedit
 alias editzsh='vim ~/.zshrc; source ~/.zshrc'
 alias editbash='vim ~/.bashrc; source ~/.zshrc'
+alias reload='source ~/.bashrc; source ~/.zshrc'
 
 #git
 alias gs='git status'
