@@ -68,6 +68,7 @@ autocmd FileType c,cpp set comments+=://
 "abbreviations and commands
 "
 :ab #p puts "\n\n\n\n\n\n\n\n\n\n\n\n"
+
 "pastemode with simple p
 :command PM set paste
 :command MP set nopaste
@@ -102,5 +103,14 @@ imap <F12> <Esc>:w<cr>:Rake<cr>
  else
    map ,e :e <C-R>=expand("%:p:h") . '\'<CR>
  endif
+
+
+" functions
+"
+"
+function! MdPreview()
+  :! markdown % > /tmp/md_preview.html && firefox  /tmp/md_preview.html
+endfunction
+command MdPreview call MdPreview()
 
 
