@@ -47,8 +47,9 @@ nnoremap k gk
 "nerdtree
 "autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
 
-nnoremap <C-P> :bp <CR>
-vnoremap <C-N> :bn <CR> 
+"buffer traversal
+nnoremap <C-P> :bp <CR>     "previous buffer
+nnoremap <C-N> :bn <CR>     "next buffer
 
 "CtrlP
 let g:ctrlp_map = '<c-o>' 
@@ -102,7 +103,4 @@ imap <F12> <Esc>:w<cr>:Rake<cr>
    map ,e :e <C-R>=expand("%:p:h") . '\'<CR>
  endif
 
-"moving in buffers"
-map <C-h> :bp <CR>
-map <C-l> :bn <CR> 
 

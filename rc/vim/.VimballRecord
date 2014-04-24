@@ -1,1 +1,2 @@
 tagbar.vba: call delete('/home/b.bellee/.vim/plugin/tagbar.vim')|call delete('/home/b.bellee/.vim/syntax/tagbar.vim')|call delete('/home/b.bellee/.vim/doc/tagbar.txt')
+markdown-1.2.2.vba: call delete('/home/bbellee/.vim/ftdetect/markdown.vim')|call delete('/home/bbellee/.vim/snippets/markdown.snippets')|call delete('/home/bbellee/.vim/syntax/markdown.vim')
