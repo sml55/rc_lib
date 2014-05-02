@@ -77,6 +77,10 @@ autocmd FileType c,cpp set comments+=://
 "remaps
 """""""""""""""""""""""""""""""""""
 
+"since C-a is my prefix for tmux, i have to remap these
+nnoremap <kPlus> <C-a>
+nnoremap <kMinus> <C-x>
+
 "explorer
 
 let g:miniBufExplMapWindowNavVim = 1
