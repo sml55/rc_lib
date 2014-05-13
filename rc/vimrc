@@ -38,6 +38,8 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop> 
+map <right> :bn<cr>
+map <left> :bp<cr>
 nnoremap j gj
 nnoremap k gk
 
