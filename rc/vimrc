@@ -44,6 +44,9 @@ nnoremap j gj
 nnoremap k gk
 
 
+"remap escape
+"inoremap jk <Esc>
+"inoremap kj <Esc>
 
 
 "nerdtree
