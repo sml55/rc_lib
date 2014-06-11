@@ -117,4 +117,6 @@ function! MdPreview()
 endfunction
 command MdPreview call MdPreview()
 
+set cryptmethod=blowfish
+
 
