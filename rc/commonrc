@@ -15,6 +15,10 @@ alias gd='git diff'
 alias ga='git add'
 alias glp='git log -p'
 
+#tmux
+alias ta='tmux attach -t'
+alias tl='tmux list-sessions'
+
 #ls
 alias ll='ls -lisa'
 
