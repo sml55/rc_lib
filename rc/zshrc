@@ -12,6 +12,7 @@ HISTFILE=~/.histfile
 setopt appendhistory extendedglob
 unsetopt beep
 bindkey -v
+bindkey "\e[3~" delete-char
 
 # End of lines configured by zsh-newuser-install
 #
