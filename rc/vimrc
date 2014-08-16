@@ -117,7 +117,7 @@ command MdPreview call MdPreview()
 function! FoldFunctions()
   :%g /function .* {.*$/ normal! $zf%
 endfunction
-command fa call FoldFunctions()
+command Fa call FoldFunctions()
 
 
 
