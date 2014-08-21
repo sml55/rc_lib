@@ -119,8 +119,4 @@ function! FoldFunctions()
 endfunction
 command Fa call FoldFunctions()
 
-
-
-
-
 set cryptmethod=blowfish
