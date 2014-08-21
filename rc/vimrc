@@ -15,7 +15,7 @@ set showmatch "anzeigen passender klammern etc
 set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
 set smartcase "smart case insensitivity
-set encoding=utf-8
+set encoding=iso-8859-1
 
 
 "rechtschreibung
@@ -117,7 +117,8 @@ command MdPreview call MdPreview()
 function! FoldFunctions()
   :%g /function .* {.*$/ normal! $zf%
 endfunction
-command fa call FoldFunctions()
+command Fa call FoldFunctions()
+
 
 
 
