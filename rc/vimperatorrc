@@ -1,3 +1,5 @@
 
 noremap j 7j
 noremap k 7k
+set defsearch=startpage
+set visualbell

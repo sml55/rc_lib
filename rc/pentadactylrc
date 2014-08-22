@@ -2,7 +2,7 @@
 noremap j 7j
 noremap k 7k
 set browser.tabs.closeWindowWithLastTab=false
-set defsearch=duckduckgo
+set defsearch=startpage
 set visualbell
 
 set guioptions=mTsr
