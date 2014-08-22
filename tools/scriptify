@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# benjamin bellee 2012
+# 
+# for more information please consult the README
+#
+
+
+# CONFIGURATION
+BINDIR=~/bin/
+STDHEADER="#!/bin/bash"
+EDITOR="vim"
+
+if [ "$1" == "" ]
+then
+    echo "please name your script"
+    exit 1
+fi
+
+SCRIPT_NAME=$1
+FULL_PATH=$BINDIR$SCRIPT_NAME
+
+# create file in ~/bin
+touch $FULL_PATH
+echo $STDHEADER > $FULL_PATH
+
+#edit
+$EDITOR $FULL_PATH
+
+#make executable
+chmod u+x $FULL_PATH
+
+
