@@ -30,3 +30,28 @@ do
 
 
 done
+
+echo "----------------------------"
+echo "i will overwrite this files:"
+ls tools 
+echo "please quit with ^c if you have a problem with that or proceed with enter"
+echo "use your .profile for machine specific configurations"
+echo "----------------------------"
+read input
+
+
+MYDIR=`pwd`
+for i in `ls tools`
+do
+        echo "creating symlink for $i"
+        cd ~/
+        if [[ -h ".$i"  || -e ".$i" ]]
+                then
+                echo "$i exists, removing....."
+                rm  ".$i"
+        fi
+        ln -s $MYDIR/tools/$i "./bin/$i"
+        cd $MYDIR
+
+
+done
