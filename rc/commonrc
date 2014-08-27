@@ -3,6 +3,10 @@
 #ALIASE
 #
 
+#neovim
+
+alias vim='nvim'
+alias legacy_vim='/usr/bin/vim'
 #rcedit
 alias editzsh='vim ~/.zshrc; source ~/.zshrc'
 alias editbash='vim ~/.bashrc; source ~/.zshrc'
