@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wget -r -e robots=off -nc -np --random-wait --limit-rate=150k $1

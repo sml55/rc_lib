@@ -1,0 +1,4 @@
+#!/bin/bash
+
+elinks "https://startpage.com/do/search?query=$1"
+

@@ -1,0 +1,14 @@
+#!/bin/sh
+#searchprogs
+
+
+
+	echo "/usr/bin"
+	whatis `ls /usr/bin` 2>/dev/null | grep "$*" 
+	echo "/bin"
+	whatis `ls /bin` 2>/dev/null  | grep $1 
+	echo "/usr/games"
+	whatis `ls /usr/games` 2>/dev/null | grep "$*" 
+	echo "/sbin"
+	whatis `ls /sbin` 2>/dev/null | grep "$*" 
+

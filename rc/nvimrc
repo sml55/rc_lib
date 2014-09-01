@@ -5,7 +5,8 @@
 syntax on       
 set number "zeilennummern
 set incsearch "schon bei eingabe anfangen zu suchen
-:filetype indent plugin on
+filetype plugin on
+filetype indent plugin on
 set ruler<
 set expandtab "lehrzeichen statt tabs
 set tabstop =2 
@@ -16,6 +17,9 @@ set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
 set smartcase "smart case insensitivity
 set encoding=iso-8859-1
+set cindent
+set smartindent
+set autoindent
 
 
 "rechtschreibung

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+DIR=`pwd`
+if [[ -e $1 ]] #argument is valid path
+then
+  DIR=$1
+fi
+
+echo "zipping up $DIR"
+
+TIMESTRING=`date +'%Y%m%d%H%M%S'`
+TAR_NAME=$DIR"_$TIMESTRING.tgz"
+TAR_CMD="tar -czf $TAR_NAME $DIR"
+echo $TAR_CMD
+$TAR_CMD
+
+GPG_CMD="gpg -c $TAR_NAME"
+echo $GPG_CMD
+$GPG_CMD
+rm $TAR_NAME
+
+

@@ -44,10 +44,10 @@ bindsym $mod+l focus right
 bindsym Mod1+Tab focus right
 
 # alternatively, you can use the cursor keys:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -75,6 +75,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+bindsym $mod+i layout default #old version on debian machine
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -87,6 +88,11 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+
+#scratchpad
+bindsym $mod+F1 move scratchpad
+bindsym $mod+F2 scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -101,8 +107,10 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 #cycle workspaces
-bindsym $mod+Right workspace next
-bindsym $mod+Left workspace prev
+bindsym Control+Shift+Right workspace next
+bindsym Control+Shift+Left workspace prev
+bindsym Control+Shift+l workspace next
+bindsym Control+Shift+h workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -131,10 +139,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -154,3 +162,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command status_bar.sh
 }
+
+focus_follows_mouse no
