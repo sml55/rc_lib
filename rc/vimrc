@@ -1,5 +1,4 @@
 
-"
 "options
 "
 syntax on       
@@ -128,3 +127,11 @@ endfunction
 command Fa call FoldFunctions()
 
 set cryptmethod=blowfish
+
+function CoworkerMode()
+:unmap <right>
+:unmap <left>
+:HardTimeOff
+endfunction
+command Cw call CoworkerMode()
+map <leader>c :Cw <CR>
