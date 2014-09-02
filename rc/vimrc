@@ -5,7 +5,8 @@
 syntax on       
 set number "zeilennummern
 set incsearch "schon bei eingabe anfangen zu suchen
-:filetype indent plugin on
+filetype plugin on
+filetype indent plugin on
 set ruler<
 set expandtab "lehrzeichen statt tabs
 set tabstop =2 
@@ -16,6 +17,9 @@ set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
 set smartcase "smart case insensitivity
 set encoding=iso-8859-1
+set cindent
+set smartindent
+set autoindent
 
 
 "rechtschreibung
@@ -52,12 +56,16 @@ nnoremap <C-N> :bn <CR>     "next buffer
 "CtrlP
 let g:ctrlp_map = '<c-o>' 
 let g:ctrlp_working_path_mode = 2
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_custom_ignore = 'Zend|Vendor'
 
 "continue doxygen comments
 autocmd FileType c,cpp set comments-=://
 autocmd FileType c,cpp set comments+=:///
 autocmd FileType c,cpp set comments+=://
 
+"hard time
+let g:hardtime_default_on = 1
 
 "ctags
 "set tags=./tags;
@@ -85,7 +93,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 
 " taglist
 nnoremap <silent> <F7> :TagbarToggle<CR> <C-j>
-let g:tagbar_autofocus = 1
+let g:tagbar_autofocus = 0
 
 " nerdtree 
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
