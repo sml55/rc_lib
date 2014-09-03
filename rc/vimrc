@@ -36,6 +36,8 @@ au BufNewFile,BufRead *.md setlocal spell
 
 map <right> :bn<cr>
 map <left> :bp<cr>
+map <up> <c-y>
+map <down> <c-e>
 nnoremap j gj
 nnoremap k gk
 
@@ -65,7 +67,8 @@ autocmd FileType c,cpp set comments+=://
 
 "hard time
 let g:hardtime_default_on = 1
-
+let g:list_of_visual_keys = [ "h", "j", "k", "l", "-", "+"]
+let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+"]
 "ctags
 "set tags=./tags;
 
