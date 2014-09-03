@@ -1,0 +1,11 @@
+http://somafm.com/cliqhop64.pls
+http://somafm.com/covers64.pls
+http://somafm.com/digitalis130.pls
+http://somafm.com/groovesalad130.pls
+http://somafm.com/indiepop130.pls
+http://somafm.com/poptron64.pls
+http://somafm.com/secretagent130.pls
+http://somafm.com/sonicuniverse64.pls
+http://somafm.com/spacestation130.pls
+http://www.deutschlandradio.de/streaming/dlf_hq_ogg.m3u
+http://www.deutschlandradio.de/streaming/dkultur_hq_ogg.m3u
