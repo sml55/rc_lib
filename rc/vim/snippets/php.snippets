@@ -4,6 +4,24 @@ snippet php
 	?>
 snippet te
 	throw new Exception(var_export(${1:variable},true));
+snippet class
+	/**
+	 *
+	 *
+	 *
+	 */
+	class ${1:class_name} {
+
+
+	} //class
+
+snippet com
+	/**
+	 * ${1:Name} ${2:short_description}
+	 *
+	 * @param
+	 * @return	
+	 */
 snippet ld
 	Log::debug("${1:log_text} %s", ${2:});
 snippet ec
@@ -37,17 +55,17 @@ snippet $_ SESSION['...']
 	$_SESSION['${1:variable}']${2}
 # Start Docblock
 snippet /*
-	/**
-	 * ${1}
-	 **/
+/**
+ * ${1}
+ */
 # Class - post doc
 snippet doc_cp
-	/**
-	 * ${1:undocumented class}
-	 *
-	 * @package ${2:default}
-	 * @author ${3:`g:snips_author`}
-	**/${4}
+/**
+ * ${1:undocumented class}
+ *
+ * @package ${2:default}
+ * @author ${3:`g:snips_author`}
+**/${4}
 # Class Variable - post doc
 snippet doc_vp
 	/**
