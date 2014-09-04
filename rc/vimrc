@@ -1,6 +1,6 @@
-
-"options
-"
+"-----------------------------------------------------------------------------------------------------
+"Options
+"-----------------------------------------------------------------------------------------------------
 syntax on       
 set number "zeilennummern
 set incsearch "schon bei eingabe anfangen zu suchen
@@ -19,40 +19,63 @@ set encoding=iso-8859-1
 set cindent
 set smartindent
 set autoindent
-
-
-"rechtschreibung
-
-" Rechtschreibung Wörterbücher: ftp://ftp.vim.org/pub/vim/runtime/spell/
 set spelllang=de,en     " Mehrere Sprachen
 set spellsuggest=5      " Max NN Korrekturen vorschlagen
-                        " Cursor auf Wort platzieren und z= eintippen 
-
+set cryptmethod=blowfish
 "set spell              " Rechtschreibprüfung für alle Dateien einschalten
-" oder: nur für bestimmte Dateitypen (Wir aktivieren spell nur für den lokalen
-" Buffer)
 au BufNewFile,BufRead *.md setlocal spell
 "set foldmethod=syntax
+
+"------------------------------------------------------------------------------------------------------
+"Mappings
+"------------------------------------------------------------------------------------------------------
 
 map <right> :bn<cr>
 map <left> :bp<cr>
 map <up> <c-y>
 map <down> <c-e>
+
+" remap j and k to scroll by visual lines not "physical" lines
 nnoremap j gj
 nnoremap k gk
 
+" better ESC
+inoremap jk <Esc>
+inoremap kj <Esc>
 
-"remap escape
-"inoremap jk <Esc>
-"inoremap kj <Esc>
-
-
-"nerdtree
-"autocmd VimEnter * exe 'NERDTree' | wincmd l "autoopen
-
-"buffer traversal
+" buffer traversal
 nnoremap <C-P> :bp <CR>     "previous buffer
 nnoremap <C-N> :bn <CR>     "next buffer
+
+" since C-a is my prefix for tmux, i have to remap these
+nn <C-i> <C-a>
+
+" explorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+
+" taglist
+nnoremap <silent> <F7> :TagbarToggle<CR> <C-j>
+let g:tagbar_autofocus = 0
+
+" nerdtree 
+nnoremap <silent> <F8> :NERDTreeToggle <CR>
+
+" Rails
+nmap <F11> <Esc>:! ruby -c % 
+
+" hard times
+map <F12> :HardTimeToggle <CR>
+
+" coworker mode
+map <leader>c :Cw <CR>
+
+
+autocmd FileType inc,php map <F11> :! phpqa.sh % <CR>
+
+"-----------------------------------------------------------------------------------------------------------
+"Plugin config
+"-----------------------------------------------------------------------------------------------------------
 
 "CtrlP
 let g:ctrlp_map = '<c-o>' 
@@ -69,56 +92,13 @@ autocmd FileType c,cpp set comments+=://
 let g:hardtime_default_on = 1
 let g:list_of_visual_keys = [ "h", "j", "k", "l", "-", "+"]
 let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+"]
-"ctags
-"set tags=./tags;
-
-"
-"abbreviations and commands
-"
-:ab #p puts "\n\n\n\n\n\n\n\n\n\n\n\n"
-
-"pastemode with simple p
-:command PM set paste
-:command MP set nopaste
-
-"""""""""""""""""""""""""""""""""""
-"remaps
-"""""""""""""""""""""""""""""""""""
-
-"since C-a is my prefix for tmux, i have to remap these
-nn <C-i> <C-a>
-
-"explorer
-
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-
-" taglist
-nnoremap <silent> <F7> :TagbarToggle<CR> <C-j>
-let g:tagbar_autofocus = 0
-
-" nerdtree 
-nnoremap <silent> <F8> :NERDTreeToggle <CR>
-
-" Rails
-nmap <F11> <Esc>:! ruby -c % 
-nmap <F12> <Esc>:Rake<cr>
-imap <F12> <Esc>:w<cr>:Rake<cr>
 
 
-" Edit another file in the same directory as the current file
-" " uses expression to extract path from current file's path
-" " (thanks Douglas Potts)
- if has("unix")
-   map ,e :e <C-R>=expand("%:p:h") . '/'<CR>
- else
-   map ,e :e <C-R>=expand("%:p:h") . '\'<CR>
- endif
 
-
+"--------------------------------------------------------------------------------------------------------
 " functions
-"
-"
+"--------------------------------------------------------------------------------------------------------
+
 function! MdPreview()
   :! markdown % > /tmp/md_preview.html && firefox  /tmp/md_preview.html
 endfunction
@@ -129,7 +109,6 @@ function! FoldFunctions()
 endfunction
 command Fa call FoldFunctions()
 
-set cryptmethod=blowfish
 
 function CoworkerMode()
 :unmap <right>
@@ -137,4 +116,23 @@ function CoworkerMode()
 :HardTimeOff
 endfunction
 command Cw call CoworkerMode()
-map <leader>c :Cw <CR>
+
+
+"--------------------------------------------------------------------------------------------------------
+"Misc
+"--------------------------------------------------------------------------------------------------------
+
+
+" Edit another file in the same directory as the current file
+" " uses expression to extract path from current file's path
+" " (thanks Douglas Potts)
+ if has("unix")
+   map ,e :e <C-R>=expand("%:p:h") . '/'<CR>
+ else
+   map ,e :e <C-R>=expand("%:p:h") . '\'<CR>
+ endif
+ 
+
+"pastemode with simple p
+:command PM set paste
+:command MP set nopaste
