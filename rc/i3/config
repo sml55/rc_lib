@@ -165,3 +165,6 @@ bar {
 }
 
 focus_follows_mouse no
+
+#cmus control
+bindsym $mod+p exec 'cmus-remote -u'
