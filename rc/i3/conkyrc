@@ -36,12 +36,13 @@ TEXT
 
 # JSON for i3bar
 
- [{ "full_text" : "D ${fs_free /home} Free" , "color" : "\#ffffff" },
-  { "full_text" : "C:${acpitemp}" , "color" : "\#ffffff" },
-  { "full_text" : "M ${memperc}%" , "color" : ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
-  { "full_text" : "L:${diskio}" , "color" : "\#ffffff" },
-  { "full_text" : "N:${downspeed}" , "color" : "\#ffffff" },
-  { "full_text" : "M:${new_mails ~/Mail/inbox }" , "color" : "\#ffffff" },
-  { "full_text" : "T:${time}" , "color" : "\#ffffff" }
+ [{ "full_text" : "disk: ${fs_free /home} Free" , "color" : "\#ffffff" },
+  { "full_text" : "temp: ${acpitemp}" , "color" : "\#ffffff" },
+  { "full_text" : "mem: ${memperc}%" , "color" : ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+  { "full_text" : "i/o: ${diskio}" , "color" : "\#ffffff" },
+  { "full_text" : "down: ${downspeed}" , "color" : "\#ffffff" },
+  { "full_text" : "mail: ${new_mails ~/Mail/inbox }" , "color" : "\#ffffff" },
+  { "full_text" : "cmus: ${exec ~/bin/cmus_title.sh}" , "color" : "\#ffffff" },
+  { "full_text" : "date :${time}" , "color" : "\#ffffff" }
   ],
 
