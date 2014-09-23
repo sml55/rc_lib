@@ -25,7 +25,7 @@ set cryptmethod=blowfish
 "set spell              " Rechtschreibprüfung für alle Dateien einschalten
 au BufNewFile,BufRead *.md setlocal spell
 "set foldmethod=syntax
-
+set tags=tags
 "------------------------------------------------------------------------------------------------------
 "Mappings
 "------------------------------------------------------------------------------------------------------
@@ -70,6 +70,8 @@ map <F12> :HardTimeToggle <CR>
 " coworker mode
 map <leader>c :Cw <CR>
 
+" search function declarations
+map <leader>f /function <CR>
 
 autocmd FileType inc,php map <F11> :! phpqa.sh % <CR>
 
