@@ -37,7 +37,7 @@ export git_branch=$git_branch
 #PS1
 setopt promptsubst
 setopt PROMPT_SUBST
-PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--$git_branch 
+PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
 [%!]> '
 
 

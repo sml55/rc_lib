@@ -2,7 +2,7 @@
 noremap j 7j
 noremap k 7k
 set browser.tabs.closeWindowWithLastTab=false
-set defsearch=startpage
+set defsearch=startpage-https
 set visualbell
 
 set guioptions=mTsr
