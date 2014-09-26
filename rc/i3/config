@@ -173,4 +173,5 @@ bar {
 focus_follows_mouse no
 
 #cmus control
-bindsym $mod+p exec 'cmus-remote -u'
+bindsym $mod+p exec --no-startup-id cmus-remote -p
+bindsym $mod+Shift+p exec --no-startup-id cmus-remote -s
