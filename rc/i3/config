@@ -30,6 +30,12 @@ bindsym $mod+Return exec konsole  #i4-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+#std console layout
+bindsym $mod+Shift+Return exec konsole; exec konsole; split v; exec konsole
+
+#xlock
+#bindsym Control+mod1+l exec 'xlock'
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -165,3 +171,7 @@ bar {
 }
 
 focus_follows_mouse no
+
+#cmus control
+bindsym $mod+p exec --no-startup-id cmus-remote -p
+bindsym $mod+Shift+p exec --no-startup-id cmus-remote -s

@@ -16,7 +16,7 @@ while :
 do
 
   if [ "$i" -eq "5" ]; then 
-    BATERIA=$PRE"B: $(acpi -b | awk '{print $NF}')"$COL'#ccbbaa'$CER
+    BATERIA=$PRE"B: $(acpi -b | awk '{print $4}')"$COL'#ccbbaa'$CER
     DISK=$PRE"D: $(df -h | awk '/cr_home/ {print $5 " ("$4" Disp.)" }')"$COL'#ccaabb'$CER
     i=0
   fi
