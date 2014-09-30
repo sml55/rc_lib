@@ -43,7 +43,6 @@ TEXT
   { "full_text" : "net: d${downspeed} u${upspeed}" , "color" : "\#ffffff" },
   { "full_text" : "mail: ${new_mails ~/Mail/inbox }" , "color" : "\#ffffff" },
   { "full_text" : "cmus: ${exec ~/bin/cmus_title.sh}" , "color" : "\#ffffff" },
-  { "full_text" : "rss: ${exec ~/bin/newsbeuter_unread}" , "color" : "\#ffffff" },
   { "full_text" : "date :${time}" , "color" : "\#ffffff" }
   ],
 
