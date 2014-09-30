@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DATABASE="$HOME/.newsbeuter/cache.db"
+
+echo "select count(*) from rss_item where unread = 1;" | sqlite3 --batch $DATABASE
