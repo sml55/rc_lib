@@ -31,7 +31,7 @@ bindsym $mod+Return exec konsole  #i4-sensible-terminal
 bindsym $mod+Shift+q kill
 
 #std console layout
-bindsym $mod+Shift+Return exec konsole; exec konsole; split v; exec konsole
+bindsym $mod+Shift+Return exec i3_std_layout
 
 #xlock
 #bindsym Control+mod1+l exec 'xlock'
@@ -175,3 +175,8 @@ focus_follows_mouse no
 #cmus control
 bindsym $mod+p exec --no-startup-id cmus-remote -p
 bindsym $mod+Shift+p exec --no-startup-id cmus-remote -s
+
+
+
+
+
