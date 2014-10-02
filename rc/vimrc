@@ -62,7 +62,7 @@ let g:tagbar_autofocus = 0
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
 
 " Rails
-nmap <F11> <Esc>:! ruby -c % 
+autocmd FileType rb nmap <F11> <Esc>:! ruby -c % 
 
 " hard times
 map <F12> :HardTimeToggle <CR>
@@ -72,6 +72,8 @@ map <leader>c :Cw <CR>
 
 " search function declarations
 map <leader>f /function <CR>
+
+map <leader>r :source ~/.vimrc <CR>
 
 autocmd FileType inc,php map <F11> :! phpqa.sh % <CR>
 
@@ -91,10 +93,12 @@ autocmd FileType c,cpp set comments+=:///
 autocmd FileType c,cpp set comments+=://
 
 "hard time
-let g:hardtime_default_on = 1
+"let g:hardtime_default_on = 1
 let g:list_of_visual_keys = [ "h", "j", "k", "l", "-", "+"]
 let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+"]
 
+"vdebug
+"let g:vdebug_options['break_on_open'] = 0
 
 
 "--------------------------------------------------------------------------------------------------------
@@ -138,3 +142,8 @@ command Cw call CoworkerMode()
 "pastemode with simple p
 :command PM set paste
 :command MP set nopaste
+
+"-------------
+"experimental
+"-------------
+
