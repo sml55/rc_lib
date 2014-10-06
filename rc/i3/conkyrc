@@ -37,12 +37,13 @@ TEXT
 # JSON for i3bar
 
  [{ "full_text" : "disk: ${fs_free /home} Free" , "color" : "\#ffffff" },
-  { "full_text" : "temp: ${acpitemp}" , "color" : "\#ffffff" },
+  { "full_text" : "cpu %: [${cpu cpu0}] ${cpu cpu1} ${cpu cpu2} ${cpu cpu3} ${cpu cpu4}" , "color" : ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
   { "full_text" : "mem: ${memperc}%" , "color" : ${if_match ${memperc}<90}"\#ffffff"${else}"\#ff0000"${endif} },
+  { "full_text" : "net: d${downspeed} u${upspeed}" , "color" : "\#ffffff" },
   { "full_text" : "i/o: ${diskio}" , "color" : "\#ffffff" },
   { "full_text" : "net: d${downspeed} u${upspeed}" , "color" : "\#ffffff" },
-  { "full_text" : "mail: ${new_mails ~/Mail/inbox }" , "color" : "\#ffffff" },
   { "full_text" : "cmus: ${exec ~/bin/cmus_title.sh}" , "color" : "\#ffffff" },
+  { "full_text" : "temp: ${acpitemp}" , "color" : "\#ffffff" },
   { "full_text" : "date :${time}" , "color" : "\#ffffff" }
   ],
 
