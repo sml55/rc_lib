@@ -144,6 +144,8 @@ command Cw call CoworkerMode()
 :command MP set nopaste
 
 "-------------
-"experimental
+"local
 "-------------
+
+source ~/.vimrc.local
 
