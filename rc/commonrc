@@ -19,6 +19,9 @@ alias glp='git log -p'
 #tmux
 alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
+function tmw {
+  tmux split-window -dh "$*"
+}
 
 #ls
 alias ll='ls -lisa'
