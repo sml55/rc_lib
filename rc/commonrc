@@ -25,6 +25,8 @@ function tmw {
 
 #ls
 alias ll='ls -lisa'
+alias ls='ls --color=auto'
+alias l='ls'
 
 #cd
 alias ..='cd ..'
@@ -64,6 +66,7 @@ HISTFILESIZE=10000
 function fbn () {
   find ./ -iname "*$1*"
 }
+
 function run () 
 {
   $* &

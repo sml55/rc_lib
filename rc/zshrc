@@ -8,8 +8,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-setopt appendhistory extendedglob
+HISTFILE=~/.zsh_history
+HISTSIZE=9999999
+SAVEHIST=9999999
+setopt appendhistory extendedglob inc_append_history
 unsetopt beep
 bindkey -v
 bindkey "\e[3~" delete-char
@@ -29,6 +31,14 @@ skip_global_compinit=1
 bindkey "\e[A" up-line-or-history
 bindkey '\e[B' down-line-or-history
 
+# set VIMODE according to the current mode (default ?[i]?)
+VIMODE='[i]'
+function zle-keymap-select {
+  VIMODE="${${KEYMAP/vicmd/[n]}/(main|viins)/[i]}"
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
 precmd()
 {
 git_branch=`git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/(\1) /'`
@@ -37,8 +47,8 @@ export git_branch=$git_branch
 #PS1
 setopt promptsubst
 setopt PROMPT_SUBST
-PS1='(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
-[%!]> '
+PS1="(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
+[%!]$VIMODE > "
 
 
 source ~/.commonrc

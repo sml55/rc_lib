@@ -15,7 +15,6 @@ set showmatch "anzeigen passender klammern etc
 set wildmode=longest:list,full "completion on fileopening
 set hidden "change buffer without saving
 set smartcase "smart case insensitivity
-set encoding=iso-8859-1
 set cindent
 set smartindent
 set autoindent
