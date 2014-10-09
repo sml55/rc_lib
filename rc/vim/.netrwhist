@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/bbellee/.subversion'
-let g:netrw_dirhist_2='/home/bbellee/projects/b24_git_richtig/bike24/phpinclude/libs/address_validation'
-let g:netrw_dirhist_3='/home/bbellee/projects/b24_git_richtig/bike24/phpinclude/Barcode'
-let g:netrw_dirhist_4='/home/bbellee/projects/b24_git_richtig/bike24/phpinclude/libs/address_validation'
-let g:netrw_dirhist_5='/home/bbellee/projects/rc_lib/rc/vim'
