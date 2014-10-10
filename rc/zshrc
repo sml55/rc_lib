@@ -39,16 +39,19 @@ function zle-keymap-select {
 }
 zle -N zle-keymap-select
 
+
 precmd()
 {
 git_branch=`git branch 2>/dev/null | grep -e '^*' | sed -E 's/^\* (.+)$/(\1) /'`
 export git_branch=$git_branch
 }
 #PS1
+autoload -U colors && colors
 setopt promptsubst
 setopt PROMPT_SUBST
-PS1="(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
-[%!]$VIMODE > "
+PS1="%{$fg[magenta]%}(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
+[%!]$VIMODE > %{$reset_colors%}"
 
 
 source ~/.commonrc
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
