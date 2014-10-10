@@ -20,9 +20,14 @@ fi
 SCRIPT_NAME=$1
 FULL_PATH=$BINDIR$SCRIPT_NAME
 
-# create file in ~/bin
-touch $FULL_PATH
-echo $STDHEADER > $FULL_PATH
+# create or edit file in ~/bin
+if [[ -e $FULL_PATH ]]
+then 
+  echo "opening $FULL_PATH"
+else
+  touch $FULL_PATH
+  echo $STDHEADER > $FULL_PATH
+fi
 
 #edit
 $EDITOR $FULL_PATH

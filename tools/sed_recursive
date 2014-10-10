@@ -2,6 +2,10 @@
 
 for f in `find . -type f`
 do 
-  grep -q $1 $f && echo $f
-  #sed -i 's/'$1'/'$2'/g' $f #will only execute if sed finds what it's looking for
+  grep $1 $f &> /dev/null
+  if [[ $? == 0 ]]
+  then
+    echo "replacing $1 with $2 in $f"
+    sed -i 's/'$1'/'$2'/g' $f #will only execute if sed finds what it's looking for
+  fi
 done
