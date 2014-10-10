@@ -2,6 +2,6 @@
 
 for f in `find . -type f`
 do 
-  grep -q $1 $f &&
-  sed -i 's/'$1'/'$2'/g' $f #will only execute if sed finds what it's looking for
+  grep -q $1 $f && echo $f
+  #sed -i 's/'$1'/'$2'/g' $f #will only execute if sed finds what it's looking for
 done
