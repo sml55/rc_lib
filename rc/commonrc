@@ -28,6 +28,9 @@ alias ll='ls -lisa'
 alias ls='ls --color=auto'
 alias l='ls'
 
+#grep
+alias grep='grep --color=auto'
+
 #cd
 alias ..='cd ..'
 alias ...='cd ../..'

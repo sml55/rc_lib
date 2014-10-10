@@ -49,19 +49,15 @@ nnoremap <C-N> :bn <CR>     "next buffer
 " since C-a is my prefix for tmux, i have to remap these
 nn <C-i> <C-a>
 
-" explorer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-
 " taglist
-nnoremap <silent> <F7> :TagbarToggle<CR> <C-j>
-let g:tagbar_autofocus = 0
+nnoremap <silent> <F7> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+" vdebug
+map <leader>b :Breakpoint <CR>
 
 " nerdtree 
 nnoremap <silent> <F8> :NERDTreeToggle <CR>
-
-" Rails
-autocmd FileType rb nmap <F11> <Esc>:! ruby -c % 
 
 " hard times
 map <F12> :HardTimeToggle <CR>
@@ -72,10 +68,20 @@ map <leader>c :Cw <CR>
 " search function declarations
 map <leader>f /function <CR>
 
+"reload vimrc
 map <leader>r :source ~/.vimrc <CR>
 
+"map F11 to run tests on php files
 autocmd FileType inc,php map <F11> :! phpqa.sh % <CR>
 
+" map F11 to run tests on Rails files
+autocmd FileType rb nmap <F11> <Esc>:! ruby -c % 
+
+"open current file in other editor
+map <leader>e :!kate % <CR> :e <CR>
+
+"tab movement
+map <leader>t :tabn <CR>
 "-----------------------------------------------------------------------------------------------------------
 "Plugin config
 "-----------------------------------------------------------------------------------------------------------
@@ -97,7 +103,11 @@ let g:list_of_visual_keys = [ "h", "j", "k", "l", "-", "+"]
 let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+"]
 
 "vdebug
-"let g:vdebug_options['break_on_open'] = 0
+let g:vdebug_options['break_on_open'] = 0
+
+" explorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
 
 
 "--------------------------------------------------------------------------------------------------------
@@ -115,6 +125,7 @@ endfunction
 command Fa call FoldFunctions()
 
 
+"make vim noob friendly
 function CoworkerMode()
 :unmap <right>
 :unmap <left>
