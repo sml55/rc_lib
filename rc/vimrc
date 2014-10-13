@@ -110,7 +110,7 @@ let g:list_of_visual_keys = [ "h", "j", "k", "l", "-", "+"]
 let g:list_of_normal_keys = [ "h", "j", "k", "l", "-", "+"]
 
 "vdebug
-let g:vdebug_options['break_on_open'] = 0
+silent! let g:vdebug_options['break_on_open'] = 0
 
 " explorer
 let g:miniBufExplMapWindowNavVim = 1
