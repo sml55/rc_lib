@@ -50,7 +50,7 @@ autoload -U colors && colors
 setopt promptsubst
 setopt PROMPT_SUBST
 PS1="%{$fg[magenta]%}(%n@%M)--(%~)--(`date "+%d.%m.%y %H:%M"`)--(%?)--$git_branch
-[%!]$VIMODE > %{$reset_colors%}"
+[%!]$VIMODE >%{$reset_colors%} "
 
 
 source ~/.commonrc
