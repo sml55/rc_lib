@@ -20,7 +20,7 @@ set smartindent
 set autoindent
 set spelllang=de,en     " Mehrere Sprachen
 set spellsuggest=5      " Max NN Korrekturen vorschlagen
-set cryptmethod=blowfish
+silent! set cryptmethod=blowfish
 "set spell              " Rechtschreibprüfung für alle Dateien einschalten
 au BufNewFile,BufRead *.md setlocal spell
 "set foldmethod=syntax
@@ -164,5 +164,7 @@ command Cw call CoworkerMode()
 "local
 "-------------
 
-source ~/.vimrc.local
+if filereadable(glob("~/.vimrc.local")) 
+  source ~/.vimrc.local
+endif
 
