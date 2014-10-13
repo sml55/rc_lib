@@ -81,6 +81,9 @@ autocmd FileType inc,php map <F11> :! phpqa.sh % <CR>
 " map F11 to run tests on Rails files
 autocmd FileType rb nmap <F11> <Esc>:! ruby -c % 
 
+"F9 runs current file
+map <F9> :! % <CR>
+
 "open current file in other editor
 map <leader>e :!kate % <CR> :e <CR>
 

@@ -1,8 +1,160 @@
 #!/bin/bash
 
-zypper -n install zsh 
-zypper -n install pip 
-zypper -n install cmus
+if  aptitude --version 
+then
+  PACKAGE_COMMAND="aptitude -y install"
+fi
+
+if zypper --version
+then
+  PACKAGE_COMMAND="zypper -n install"
+fi
+
+
+$PACKAGE_COMMAND zsh 
+$PACKAGE_COMMAND pip 
+$PACKAGE_COMMAND cmus
+$PACKAGE_COMMAND ranger
+
+#zsh-syntax-hihlighting
+
+#dosbox
+
+#newsbeuter
+
+$PACKAGE_COMMAND aajm
+$PACKAGE_COMMAND ack-grep
+$PACKAGE_COMMAND acl
+$PACKAGE_COMMAND angband
+$PACKAGE_COMMAND animals
+$PACKAGE_COMMAND argyll
+$PACKAGE_COMMAND asciijump
+$PACKAGE_COMMAND at
+$PACKAGE_COMMAND bastet
+$PACKAGE_COMMAND bc
+$PACKAGE_COMMAND blender
+$PACKAGE_COMMAND bombardier
+$PACKAGE_COMMAND bsdgames
+$PACKAGE_COMMAND bsdmainutils
+$PACKAGE_COMMAND bsdutils
+$PACKAGE_COMMAND build-essential
+$PACKAGE_COMMAND busybox
+$PACKAGE_COMMAND bzip2
+$PACKAGE_COMMAND calibre
+$PACKAGE_COMMAND canto
+$PACKAGE_COMMAND cavezofphear
+$PACKAGE_COMMAND cli-common
+$PACKAGE_COMMAND conky-cli
+$PACKAGE_COMMAND coreutils
+$PACKAGE_COMMAND cowsay
+$PACKAGE_COMMAND crawl
+$PACKAGE_COMMAND crda
+$PACKAGE_COMMAND curl
+$PACKAGE_COMMAND curseofwar
+$PACKAGE_COMMAND davfs2
+$PACKAGE_COMMAND dc
+$PACKAGE_COMMAND ddd
+$PACKAGE_COMMAND diffutils
+$PACKAGE_COMMAND elinks
+$PACKAGE_COMMAND empire
+$PACKAGE_COMMAND exuberant-ctags
+$PACKAGE_COMMAND fetchmailconf
+$PACKAGE_COMMAND fizmo-ncursesw
+$PACKAGE_COMMAND fortune
+$PACKAGE_COMMAND freepats
+$PACKAGE_COMMAND freesweep
+$PACKAGE_COMMAND frotz
+$PACKAGE_COMMAND funny-manpages
+$PACKAGE_COMMAND games-console
+$PACKAGE_COMMAND games-tasks
+$PACKAGE_COMMAND gcc
+$PACKAGE_COMMAND gdb
+$PACKAGE_COMMAND gearhead
+$PACKAGE_COMMAND gimp-data
+$PACKAGE_COMMAND git
+$PACKAGE_COMMAND git-core
+$PACKAGE_COMMAND git-svn
+$PACKAGE_COMMAND glade
+$PACKAGE_COMMAND gnuchess
+$PACKAGE_COMMAND gnuchess-book
+$PACKAGE_COMMAND gnugo
+$PACKAGE_COMMAND gnuminishogi
+$PACKAGE_COMMAND gnupg
+$PACKAGE_COMMAND gpgv
+$PACKAGE_COMMAND gpp
+$PACKAGE_COMMAND graphviz
+$PACKAGE_COMMAND greed
+$PACKAGE_COMMAND html2text
+$PACKAGE_COMMAND htop
+$PACKAGE_COMMAND i3
+$PACKAGE_COMMAND imagemagick
+$PACKAGE_COMMAND imagemagick-common
+$PACKAGE_COMMAND kate
+$PACKAGE_COMMAND keepassx
+$PACKAGE_COMMAND kmymoney
+$PACKAGE_COMMAND logwatch
+$PACKAGE_COMMAND markdown
+$PACKAGE_COMMAND matanza
+$PACKAGE_COMMAND mawk
+$PACKAGE_COMMAND moria
+$PACKAGE_COMMAND mplayer
+$PACKAGE_COMMAND mutt
+$PACKAGE_COMMAND nethack-console
+$PACKAGE_COMMAND netris
+$PACKAGE_COMMAND nettoe
+$PACKAGE_COMMAND net-tools
+$PACKAGE_COMMAND nmap
+$PACKAGE_COMMAND ogamesim
+$PACKAGE_COMMAND okular
+$PACKAGE_COMMAND omega-rpg
+$PACKAGE_COMMAND openssh-client
+$PACKAGE_COMMAND openssh-server
+$PACKAGE_COMMAND pacman4console
+$PACKAGE_COMMAND pandoc
+$PACKAGE_COMMAND perl
+$PACKAGE_COMMAND perl-base
+$PACKAGE_COMMAND perl-modules
+$PACKAGE_COMMAND petris
+$PACKAGE_COMMAND procmail
+$PACKAGE_COMMAND python
+$PACKAGE_COMMAND qgit
+$PACKAGE_COMMAND rarian-compat
+$PACKAGE_COMMAND robotfindskitten
+$PACKAGE_COMMAND rsyslog
+$PACKAGE_COMMAND ruby
+$PACKAGE_COMMAND ruby-dev
+$PACKAGE_COMMAND rubygems
+$PACKAGE_COMMAND ruby-sqlite3
+$PACKAGE_COMMAND saidar
+$PACKAGE_COMMAND slashem
+$PACKAGE_COMMAND sqlite3
+$PACKAGE_COMMAND strace
+$PACKAGE_COMMAND subversion
+$PACKAGE_COMMAND sudoku
+$PACKAGE_COMMAND tig
+$PACKAGE_COMMAND tintin++
+$PACKAGE_COMMAND tmux
+$PACKAGE_COMMAND transmission
+$PACKAGE_COMMAND tree
+$PACKAGE_COMMAND vifm
+$PACKAGE_COMMAND vim
+$PACKAGE_COMMAND virt-manager
+$PACKAGE_COMMAND virtuoso-minimal
+$PACKAGE_COMMAND virtuoso-opensource-6.1-bin
+$PACKAGE_COMMAND virtuoso-opensource-6.1-common
+$PACKAGE_COMMAND vlc-data
+$PACKAGE_COMMAND vlc-nox
+$PACKAGE_COMMAND vlc-plugin-pulse
+$PACKAGE_COMMAND wamerican
+$PACKAGE_COMMAND whiptail
+$PACKAGE_COMMAND wine
+$PACKAGE_COMMAND wireshark
+$PACKAGE_COMMAND xz-utils
+$PACKAGE_COMMAND yakuake
+$PACKAGE_COMMAND zenity-common
+$PACKAGE_COMMAND zgv
+$PACKAGE_COMMAND zivot
+
 
 
 mkdir ~/src
@@ -19,889 +171,3 @@ git clone https://github.com/junegunn/fzf.git ~/.fzf
 pip install mps
 pip install mps-youtube
 
-
-
-
-
-#ranger
-
-#vifm
-
-#zsh-syntax-hihlighting
-
-#wine
-
-#dosbox
-
-#newsbeuter
-
-#aajm
-#ack-grep
-#acl
-#acpi
-#acpid
-#acpi-support-base
-#adduser
-#alpine
-#alpine-doc
-#alsa-base
-#alsa-utils
-#an
-#angband
-#animals
-#ant
-#ant-optional
-#apg
-#apt
-#aptdaemon-data
-#aptitude
-#aptitude-common
-#apt-listchanges
-#apt-utils
-#argyll
-#asciijump
-#asr-manpages
-#at
-#autoconf
-#automake
-#autopoint
-#aview
-#base-files
-#base-passwd
-#bash
-#bash-completion
-#bastet
-#bc
-#bind9-host
-#blender
-#bogofilter
-#bogofilter-bdb
-#bogofilter-common
-#bombardier
-#bsdgames
-#bsd-mailx
-#bsdmainutils
-#bsdutils
-#build-essential
-#busybox
-#bzip2
-#ca-certificates-java
-#calibre
-#canto
-#cavezofphear
-#cdrdao
-#chromium
-#cli-common
-#cmake
-#conky-cli
-#console-setup
-#coreutils
-#cowsay
-#cpio
-#cpp-4.7
-#crawl
-#crda
-#cron
-#cron-apt
-#cryptsetup-bin
-#curl
-#curseofwar
-#dash
-#davfs2
-#db5.1-util
-#dc
-#dconf-gsettings-backend
-#dconf-service
-#ddd
-#debconf
-#debconf-i18n
-#debian-archive-keyring
-#debian-faq
-#debianutils
-#default-jre-headless
-#desktop-file-utils
-#diffutils
-#discover
-#dmidecode
-#dnsmasq-base
-#dnsutils
-#docbook
-#docbook-dsssl
-#docbook-xml
-#docbook-xsl
-#doc-debian
-#doxygen
-#doxygen-gui
-#dpkg
-#dxpc
-#e2fslibs
-#e2fsprogs
-#eject
-#elinks
-#emacs
-#empathy-common
-#empire
-#esound-common
-#espeak-data
-#exim4
-#exim4-base
-#exim4-config
-#exim4-daemon-light
-#exuberant-ctags
-#fcgiwrap
-#fetchmailconf
-#file
-#findutils
-#finger
-#fizmo-ncursesw
-#folks-common
-#fonts-cantarell
-#fonts-liberation
-#fonts-lyx
-#fonts-opensymbol
-#fonts-sil-gentium
-#fonts-sil-gentium-basic
-#fonts-stix
-#fortune-mod
-#freepats
-#freesweep
-#frotz
-#ftp
-#funny-manpages
-#g++
-#games-console
-#games-tasks
-#gcc
-#gcc-4.7
-#gcc-4.7-base
-#gconf2-common
-#gdb
-#gdebi-core
-#gearhead
-#gettext-base
-#gimp-data
-#gir1.2-gdesktopenums-3.0
-#git
-#git-core
-#git-svn
-#glade
-#gnome-accessibility-themes
-#gnome-backgrounds
-#gnome-common
-#gnome-control-center-data
-#gnome-desktop3-data
-#gnome-doc-utils
-#gnome-games-extra-data
-#gnome-js-common
-#gnome-menus
-#gnome-mime-data
-#gnome-packagekit-data
-#gnome-session-common
-#gnome-themes-standard-data
-#gnuchess
-#gnuchess-book
-#gnugo
-#gnuminishogi
-#gnupg
-#gpgv
-#gpp
-#graphviz
-#greed
-#grep
-#groff-base
-#grub-common
-#grub-pc
-#guile-2.0-libs
-#gvfs
-#gvfs-common
-#gvfs-daemons
-#gvfs-libs
-#gzip
-#hdparm
-#hicolor-icon-theme
-#host
-#hostname
-#hplip-data
-#html2text
-#htop
-#hunspell-en-us
-#hwdata
-#hyphen-en-us
-#i3
-#icedove
-#icedtea-6-jre-cacao
-#icedtea-6-jre-jamvm
-#icedtea-netx-common
-#iceweasel
-#ifupdown
-#imagemagick
-#imagemagick-common
-#info
-#initramfs-tools
-#initscripts
-#insserv
-#installation-report
-#install-info
-#iproute
-#iptables
-#iptraf
-#iputils-ping
-#iputils-tracepath
-#isc-dhcp-client
-#isc-dhcp-common
-#iw
-#jacksum
-#jade
-#java-common
-#kalarm
-#kate
-#kate-data
-#kde-baseapps-data
-#kdelibs5-data
-#kde-runtime-data
-#kdm
-#keepass2
-#keepassx
-#keyboard-configuration
-#kicad
-#kmod
-#kmymoney
-#konqueror
-#konsole
-#krb5-locales
-#ksysguardd
-#laptop-detect
-#less
-#liba52-0.7.4
-#libaacs0
-#libacl1
-#libakonadi-kabc4
-#libamd2.2.0
-#libao4
-#libao-common
-#libapache2-mod-dnssd
-#libapache2-mod-fcgid
-#libapache2-mod-php5filter
-#libapache-pom-java
-#libapt-inst1.5
-#libapt-pkg4.12
-#libart-2.0-2
-#libasan1
-#libass4
-#libatasmart4
-#libatk1.0-data
-#libatk-wrapper-java
-#libattr1
-#libaudio2
-#libaudiofile1
-#libavahi-glib1
-#libavc1394-0
-#libbabl-0.1-0
-#libblas3
-#libblas3gf
-#libblkid1
-#libbluetooth3
-#libbluray1
-#libbonobo2-0
-#libbonobo2-common
-#libbonoboui2-common
-#libbonoboui2-dev
-#libboost-iostreams1.49.0
-#libboost-program-options1.49.0
-#libboost-thread1.49.0
-#libburn4
-#libbz2-1.0
-#libc6
-#libcairo-gobject2
-#libcairomm-1.0-1
-#libcairo-perl
-#libcanberra0
-#libcap2-bin
-#libcap-ng0
-#libcaribou-common
-#libc-bin
-#libcdaudio1
-#libcddb2
-#libcdparanoia0
-#libcdt4
-#libcgraph5
-#libck-connector0
-#libclass-isa-perl
-#libclucene0ldbl
-#libclutter-1.0-common
-#libcmis-0.2-0
-#libcogl-common
-#libcolamd2.7.1
-#libcolorblind0
-#libcomerr2
-#libcommons-beanutils-java
-#libcommons-collections3-java
-#libcommons-compress-java
-#libcommons-digester-java
-#libcommons-logging-java
-#libcommons-parent-java
-#libcpufreq0
-#libcryptsetup4
-#libcrystalhd3
-#libcurl4-openssl-dev
-#libcwidget3
-#libdatrie1
-#libdb5.1
-#libdb5.1-java
-#libdb5.1-java-jni
-#libdb-java
-#libdb-je-java
-#libdbus1.0-cil
-#libdca0
-#libdconf0
-#libdevmapper-event1.02.1
-#libdirac-decoder0
-#libdiscid0
-#libdjvulibre21
-#libdjvulibre-text
-#libdlrestrictions1
-#libdotconf1.0
-#libdv4
-#libdvbpsi7
-#libdvdnav4
-#libdvdread4
-#libebml3
-#libelf1
-#libenca0
-#libepc-common
-#libept1.4.12
-#libesd0
-#libespeak1
-#libexempi3
-#libexif12
-#libexiv2-12
-#libexpat1-dev
-#libexttextcat0
-#libexttextcat-data
-#libfaad2
-#libfam0
-#libffi-dev
-#libfile-basedir-perl
-#libfile-desktopentry-perl
-#libflite1
-#libfreetype6-dev
-#libgadu3
-#libgcc1
-#libgck-1-0
-#libgconf2-4
-#libgcr-3-common
-#libgcrypt11
-#libgd2-xpm
-#libgdata-common
-#libgdbm3
-#libgdict-common
-#libgdk-pixbuf2.0-0
-#libgdk-pixbuf2.0-common
-#libgdu0
-#libgettextpo0
-#libgif4
-#libgl1-mesa-dev
-#libgme0
-#libgnome2-0
-#libgnome2-common
-#libgnome2-dev
-#libgnomecanvas2-common
-#libgnome-keyring0
-#libgnome-keyring-common
-#libgnomeui-common
-#libgnomeui-dev
-#libgnomevfs2-common
-#libgnomevfs2-extra
-#libgnutls26
-#libgoa-1.0-common
-#libgpg-error0
-#libgphoto2-2
-#libgphoto2-l10n
-#libgphoto2-port0
-#libgps20
-#libgraph4
-#libgsf-1-common
-#libgsl0ldbl
-#libgssglue1
-#libgtk2.0-common
-#libgtk2.0-dev
-#libgtk2.0-doc
-#libgtk-3-common
-#libgtksourceview-3.0-common
-#libgtop2-common
-#libgvpr1
-#libhsqldb-java
-#libhunspell-1.3-0
-#libhyphen0
-#libical0
-#libicc2
-#libicu48
-#libicu4j-java
-#libidl0
-#libidn11
-#libiec61883-0
-#libieee1284-3
-#libimdi0
-#libiodbc2
-#libiptcdata0
-#libiso9660-8
-#libisofs6
-#libjaxp1.3-java
-#libjbig0
-#libjim0debian2
-#libjline-java
-#libjson-c-dev
-#libjte1
-#libjtidy-java
-#libkate1
-#libkmod2
-#libkonq5-templates
-#liblapack3
-#liblensfun-data
-#liblinear1
-#liblinear-tools
-#liblircclient0
-#liblocale-gettext-perl
-#liblocale-msgfmt-perl
-#liblockfile-bin
-#liblouis2
-#liblouis-data
-#liblsan0
-#liblua5.2-dev
-#liblucene2-java
-#liblvm2app2.2
-#liblzma5
-#libmad0
-#libmail-sendmail-perl
-#libmatroska5
-#libmhash2
-#libminiupnpc5
-#libmng1
-#libmodplug1
-#libmono-addins0.2-cil
-#libmono-cairo4.0-cil
-#libmono-corlib4.0-cil
-#libmono-i18n4.0-cil
-#libmono-i18n-west4.0-cil
-#libmono-posix4.0-cil
-#libmono-security4.0-cil
-#libmono-sharpzip4.84-cil
-#libmono-system4.0-cil
-#libmono-system-configuration4.0-cil
-#libmono-system-core4.0-cil
-#libmono-system-security4.0-cil
-#libmono-system-xml4.0-cil
-#libmount1
-#libmozjs10d
-#libmozjs17d
-#libmozjs185-1.0
-#libmozjs24d
-#libmpcdec6
-#libmpeg2-4
-#libmtp9
-#libmtp-common
-#libmtp-runtime
-#libmusicbrainz5-0
-#libmx-common
-#libmysqlclient-dev
-#libmythes-1.2-0
-#libnatpmp1
-#libncurses5
-#libncurses5-dev
-#libncursesw5
-#libnetfilter-conntrack3
-#libnewt0.52
-#libnfnetlink0
-#libnfsidmap2
-#libnl-3-200
-#libnl-genl-3-200
-#libnl-route-3-200
-#libnm-gtk-common
-#libnotify4
-#libnss3
-#libnss3-1d
-#libntrack0
-#liboauth0
-#libofa0
-#libonig2
-#libopencore-amrnb0
-#libopencore-amrwb0
-#libopenobex1
-#libopenraw1
-#libopus0
-#liborbit2
-#libp11-kit0
-#libpam0g
-#libpam-cap
-#libpam-ck-connector
-#libpam-gnome-keyring
-#libpam-modules
-#libpam-modules-bin
-#libpam-pkcs11
-#libpam-runtime
-#libpango1.0-0
-#libpathplan4
-#libpeas-common
-#libpipeline1
-#libplist1
-#libplot2c2
-#libpng12-dev
-#libpng++-dev
-#libpopt0
-#libpostproc52
-#libprocps0
-#libproxy0
-#libpst4
-#libpth-dev
-#libpthread-stubs0-dev
-#libpthread-workqueue-dev
-#libqdbm14
-#libquvi7
-#libquvi-scripts
-#libraptor2-0
-#librarian0
-#librasqal3
-#libraw5
-#librdf0
-#libreadline6
-#libreadline6-dev
-#librecad
-#libregexp-java
-#libreoffice
-#libresid-builder0c2a
-#librsvg2-2
-#librsvg2-common
-#libsane
-#libsane-common
-#libsane-extras
-#libsane-extras-common
-#libsane-hpaio
-#libsdl-image1.2
-#libselinux1
-#libsemanage1
-#libsemanage-common
-#libsepol1
-#libservlet2.5-java
-#libsgutils2-2
-#libshout3
-#libsidplay1
-#libsidplay2
-#libsigc++-2.0-0c2a
-#libslang2
-#libslv2-9
-#libsmbclient
-#libsocialweb-common
-#libsofia-sip-ua0
-#libsofthsm
-#libsonic0
-#libsoundtouch0
-#libsp1c2
-#libspandsp2
-#libspectre1
-#libspeechd2
-#libsqlite0-dev
-#libsqlite3-0
-#libsqlite3-dev
-#libss2
-#libssh-4
-#libssl1.0.0
-#libssl-dev
-#libstartup-notification0
-#libstdc++6
-#libstdc++6-4.7-dev
-#libstfl-dev
-#libstreamanalyzer0
-#libstreams0
-#libswitch-perl
-#libsys-hostname-long-perl
-#libsystemd-daemon0
-#libt1-5
-#libtag1c2a
-#libtag1-vanilla
-#libtar0
-#libtasn1-3
-#libtext-charwidth-perl
-#libtext-iconv-perl
-#libtext-wrapi18n-perl
-#libthai0
-#libthai-data
-#libtinfo5
-#libtool
-#libtsan0
-#libtwolame0
-#libubsan0
-#libudev0
-#libumfpack5.4.0
-#libupnp6
-#libusb-0.1-4
-#libusbmuxd1
-#libustr-1.0-1
-#libuuid1
-#libv4l-0
-#libv4lconvert0
-#libv8-3.8.9.20
-#libva-x11-1
-#libvcdinfo0
-#libvirtodbc0
-#libvisio-0.0-0
-#libvisual-0.4-0
-#libvisual-0.4-plugins
-#libvlc5
-#libvlccore5
-#libvo-aacenc0
-#libvo-amrwbenc0
-#libvorbisfile3
-#libvte-2.90-common
-#libvte-common
-#libwacom-common
-#libwavpack1
-#libwebkitgtk-1.0-common
-#libwebkitgtk-3.0-common
-#libwebp2
-#libwebrtc-audio-processing-0
-#libwildmidi1
-#libwildmidi-config
-#libwnck-3-common
-#libwnck-common
-#libwps-0.2-2
-#libxalan2-java
-#libxapian22
-#libxcb-composite0
-#libxcb-keysyms1
-#libxcb-randr0
-#libxcb-util0
-#libxcb-xfixes0
-#libxcb-xv0
-#libxdot4
-#libxerces2-java
-#libxext-dev
-#libxkbfile1
-#libxml2-dev
-#libxml2-utils
-#libxml-commons-external-java
-#libxml-commons-resolver1.1-java
-#libxpm-dev
-#libxrender-dev
-#libxres1
-#libxslt1.1
-#libxt-dev
-#libxz-java
-#libyajl2
-#libzbar0
-#libzephyr4
-#libzvbi0
-#libzvbi-common
-#links
-#links2
-#linux-image-amd64
-#locales
-#locales-all
-#login
-#logrotate
-#logwatch
-#lp-solve
-#lsb-base
-#lsof
-#lua5.2
-#lynx
-#m4
-#make
-#man-db
-#manpages
-#manpages-de-dev
-#markdown
-#matanza
-#mawk
-#media-player-info
-#mercurial
-#mesa-common-dev
-#mime-support
-#minissdpd
-#mlocate
-#mobile-broadband-provider-info
-#mono-4.0-gac
-#mono-gac
-#mono-runtime
-#moria
-#mount
-#mplayer
-#multiarch-support
-#mutt
-#mysql-b24dev
-#mysql-server-core-5.5
-#mysql-workbench
-#nano
-#ncurses-base
-#ncurses-bin
-#ncurses-term
-#netbase
-#netcat-traditional
-#netdiag
-#nethack-console
-#netris
-#nettoe
-#net-tools
-#network-manager
-#ninvaders
-#nmap
-#ntfs-3g
-#ntpdate
-#ntrack-module-libnl-0
-#odbcinst
-#odbcinst1debian2
-#ogamesim
-#okular
-#omega-rpg
-#openjdk-6-jre-headless
-#openjdk-6-jre-lib
-#openscad
-#openssh-client
-#openssh-server
-#oracle-client-b24
-#oxygen-icon-theme
-#p11-kit
-#p7zip-full
-#pacman4console
-#pandoc
-#passwd
-#patch
-#pciutils
-#perl
-#perl-base
-#perl-modules
-#petris
-#php5-common
-#php-apc-b24dev
-#php-b24dev
-#pidgin-data
-#pkg-config
-#pm-utils
-#procmail
-#procps
-#pulseaudio-utils
-#python
-#python2.6-minimal
-#python2.7
-#python-apt
-#python-beautifulsoup
-#python-brlapi
-#python-cairo
-#python-dbus-dev
-#python-defer
-#python-dev
-#python-gnupginterface
-#python-httplib2
-#python-imaging
-#python-louis
-#python-mako
-#python-markupsafe
-#python-minimal
-#python-numpy
-#python-pexpect
-#python-pip
-#python-pkg-resources
-#python-pycurl
-#python-renderpm
-#python-reportbug
-#python-reportlab
-#python-reportlab-accel
-#python-requests
-#python-software-properties
-#python-speechd
-#python-support
-#qgit
-#rarian-compat
-#rdesktop
-#readline-common
-#reportbug
-#robotfindskitten
-#rsyslog
-#rtkit
-#ruby
-#ruby-dev
-#rubygems
-#ruby-sqlite3
-#saidar
-#sane-utils
-#sed
-#sensible-utils
-#sgml-data
-#shared-desktop-ontologies
-#slashem
-#sound-theme-freedesktop
-#sp
-#sqlite3
-#strace
-#subversion
-#sudo
-#sudoku
-#sysvinit
-#sysvinit-utils
-#sysv-rc
-#tar
-#task-german
-#task-german-desktop
-#task-german-kde-desktop
-#task-print-server
-#tasksel
-#tasksel-data
-#telnet
-#tetrinet-client
-#texinfo
-#tig
-#time
-#tint
-#tintin++
-#tmux
-#traceroute
-#transmission-common
-#tree
-#ttf-liberation
-#ttf-sil-gentium-basic
-#tzdata
-#tzdata-java
-#ucf
-#udev
-#unattended-upgrades
-#unclutter
-#uno-libs3
-#ure
-#usb-modeswitch
-#usb-modeswitch-data
-#usbmuxd
-#usbutils
-#util-linux
-#util-linux-locales
-#vbetool
-#vifm
-#vim
-#vim-common
-#vim-nox
-#virt-manager
-#virtuoso-minimal
-#virtuoso-opensource-6.1-bin
-#virtuoso-opensource-6.1-common
-#vlc-data
-#vlc-nox
-#vlc-plugin-pulse
-#w3m
-#wamerican
-#wget
-#whiptail
-#whois
-#wine
-#wireless-regdb
-#wireshark
-#wpasupplicant
-#x11-xkb-utils
-#xbrlapi
-#xdg-user-dirs
-#xfonts-mathml
-#xz-utils
-#yakuake
-#yelp-xsl
-#zenity-common
-#zgv
-#zivot
-#zlib1g
-#zsh
