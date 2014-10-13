@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo tail -f /var/log/{syslog,messages,faillog,auth.log,daemon.log,dmesg,kern.log,user.log}
+sudo tail -f /var/log/{syslog,messages,warn,firewall,faillog,auth.log,daemon.log,dmesg,kern.log,user.log,localmessages,pbl.log}
