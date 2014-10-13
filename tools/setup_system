@@ -1,6 +1,8 @@
 #!/bin/bash
 
 zypper -n install zsh 
+zypper -n install pip 
+zypper -n install cmus
 
 
 mkdir ~/src
@@ -13,6 +15,11 @@ cd rc_lib && ./setup.sh && cd -
 #FZF
 git clone https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+pip install mps
+pip install mps-youtube
+
+
 
 
 
@@ -86,7 +93,6 @@ git clone https://github.com/junegunn/fzf.git ~/.fzf
 #chromium
 #cli-common
 #cmake
-#cmus
 #conky-cli
 #console-setup
 #coreutils
