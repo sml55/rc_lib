@@ -171,3 +171,4 @@ git clone https://github.com/junegunn/fzf.git ~/.fzf
 pip install mps
 pip install mps-youtube
 
+#id3v2
