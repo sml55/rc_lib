@@ -92,6 +92,7 @@ fe() {
   local file
   file=$(fzf --query="$1" --select-1 --exit-0)
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
+  print -s "vim $file"
 }
 
 # fd - cd to selected directory
@@ -100,6 +101,7 @@ fd() {
   dir=$(find ${1:-*} -path '*/\.*' -prune \
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
+  print -s "cd $dir"
 }
 
 # fh - repeat history
@@ -112,14 +114,10 @@ fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
 
-
-# fkill - kill process
-fkill() {
-  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
-}
-
 fdo() {
-  $* `fzf -m`
+  file=`fzf -m`
+  print -s "$* $file"
+  $* $file
 }
 
 source ~/.profile
