@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+Return exec i3_std_layout
 
 #xlock
-#bindsym Control+mod1+l exec 'xlock'
+bindsym Control+mod1+l exec 'i3lock'
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -100,6 +100,9 @@ bindsym $mod+a focus parent
 #scratchpad
 bindsym $mod+F1 move scratchpad
 bindsym $mod+F2 scratchpad show
+
+#shortcuts
+bindsym $mod+F3 exec firefox
 
 # switch to workspace
 bindsym $mod+1 workspace 1
