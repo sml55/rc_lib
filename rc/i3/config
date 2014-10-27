@@ -178,6 +178,7 @@ focus_follows_mouse no
 #cmus control
 bindsym $mod+p exec --no-startup-id cmus-remote -p
 bindsym $mod+Shift+p exec --no-startup-id cmus-remote -s
+bindsym $mod+b exec --no-startup-id cmus-remote --next
 
 
 
