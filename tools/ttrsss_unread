@@ -2,9 +2,10 @@
 
 if [ -z "$TTRSS_SESSION_KEY" ]
 then
-  answer=`curl -k -d '{"op":"login", "user":"'$TTRSS_USER'", "password":"'$TTRSS_PASSWD'"}'`
- TTRSS_SESSION_KEY=`echo $anser | awk -fs 'content' '{print $2}'`
+  echo $TTRSS_USER
+  echo $TTRSS_PASSWD
+  answer=`curl -k -d '{"op":"login", "user":"'$TTRSS_USER'", "password":"'$TTRSS_PASSWD'"}' $TTRSS_URL`
+  TTRSS_SESSION_KEY=`echo $answer | awk -F 'content' '{print $2}' | awk -F '"' '{print $5}'`
 fi
 
-
-curl -k -d '{"sid":"ijqamh5j2moq40c5cka20l2a34", "op":"getUnread"}' $TTRSS_URL
+curl -k -d '{"sid":"'$TTRSS_SESSION_KEY'", "op":"getUnread"}' $TTRSS_URL
