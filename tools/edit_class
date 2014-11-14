@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find ./src ./include  -name "$1.[^o]*" -exec vim -O "{}" \+
+
