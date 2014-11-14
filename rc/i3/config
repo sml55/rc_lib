@@ -38,6 +38,8 @@ bindsym Control+mod1+l exec 'i3lock'
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+d exec kupfer
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -181,7 +183,7 @@ bindsym $mod+Shift+p exec --no-startup-id cmus-remote -s
 bindsym $mod+b exec --no-startup-id cmus-remote --next
 
 #composition
-exec --no-startup-id xcompmgr -c -f -n 
+#exec --no-startup-id xcompmgr -c -f -n 
 
 
 

@@ -42,7 +42,7 @@ TEXT
   { "full_text" : "mem:${memperc}%" , "color" : ${if_match ${memperc}<70}"\#ffffff"${else}"\#ff0000"${endif} },
   { "full_text" : "c:${exec netstat -p | grep tcp | grep -v TIME_WAIT | grep -v thunderbird | grep -v firefox | wc -l}" , "color" : "\#ffffff" },
   { "full_text" : "i/o:${diskio}" , "color" : "\#ffffff" },
-  { "full_text" : "d${downspeed wlp3s0} u${upspeed wlp3s0}" , "color" : "\#ffffff" },
+  { "full_text" : "d${downspeed } u${upspeed }" , "color" : "\#ffffff" },
   { "full_text" : "t${acpitemp}" , "color" : "\#ffffff" },
   { "full_text" : "${time}" , "color" : "\#ffffff" }
   ],

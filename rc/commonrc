@@ -15,6 +15,7 @@ alias gc='git commit'
 alias gd='git diff'
 alias ga='git add'
 alias glp='git log -p'
+alias gstack='git commit -a --amend'
 
 #tmux
 alias ta='tmux attach -t'
@@ -30,6 +31,8 @@ alias l='ls'
 
 #grep
 alias grep='grep --color=auto'
+alias gr='grep -r'
+alias g='grep'
 
 #cd
 alias ..='cd ..'
@@ -38,6 +41,9 @@ alias ....='cd ../../..'
 
 #cp
 alias cp='cp -i'
+
+#bc with sane defaults
+alias bc='bc -l'
 
 #
 # Variables
