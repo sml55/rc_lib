@@ -20,6 +20,7 @@ alias gstack='git commit -a --amend'
 #tmux
 alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
+alias tna='tmux list-sessions | grep -v "attached"'
 function tmw {
   tmux split-window -dh "$*"
 }

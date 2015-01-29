@@ -28,6 +28,10 @@ set tags=tags
 
 set rtp+=~/.fzf
 
+set nobackup
+set noswapfile
+set nowritebackup
+
 
 "------------------------------------------------------------------------------------------------------
 "Mappings
