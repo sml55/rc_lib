@@ -1,0 +1,2 @@
+sudo cryptsetup luksOpen $1 $2 && sudo mkdir /mnt/$2 
+sudo mount /dev/mapper/$2 /mnt/$2
