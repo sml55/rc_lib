@@ -4,5 +4,6 @@ noremap k 7k
 set browser.tabs.closeWindowWithLastTab=false
 set defsearch=startpage-https
 set visualbell
+set hintkeys=asdfhlkj
 
 set guioptions=mTsr
