@@ -1,0 +1,8 @@
+#!/bin/sh
+ifconfig enp5s0 192.168.2.1
+echo 1 > /proc/sys/net/ipv4/ip_forward
+INET="wlp6s0"
+ifconfig $INET
+INETIP="$(ifconfig $INET | sed -n '/inet addr/{s/.*addr://;s/ .*//;p}')"
+echo $INETIP
+iptables -t nat -A POSTROUTING -o $INET -j SNAT --to-source 192.168.0.45
