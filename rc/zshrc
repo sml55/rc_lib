@@ -60,4 +60,4 @@ zle -N zle-line-init
 
 source ~/.commonrc
 source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

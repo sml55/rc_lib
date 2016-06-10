@@ -58,14 +58,6 @@ export GIT_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
 
-#grep
-GREP_OPTIONS=
-if grep --help | grep -- --exclude-dir &>/dev/null; then
-  for pattern in .cvs .git .hg .svn; do
-    GREP_OPTIONS="$GREP_OPTIONS --exclude-dir=$pattern"
-  done
-fi
-export GREP_OPTIONS
 
 #
 # settings
