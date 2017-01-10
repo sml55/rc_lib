@@ -32,12 +32,6 @@ fi
 # VIM for ever!
 export EDITOR=vim
 
-#CAPSLOCK IS FOR SUCKERS
-MODMAP=`whereis xmodmap | awk '{print $2}'`
-if [[ -n "$MODMAP" ]]; then
-  xmodmap -e 'keycode 66 = F1'
-  xmodmap -e 'clear Lock'
-fi
 
 
 # set a fancy prompt (non-color, unless we know we "want" color)

@@ -3,6 +3,9 @@
 #ALIASE
 #
 
+#neovim
+alias vim="nvim"
+
 #rcedit
 alias editzsh='vim ~/.zshrc; source ~/.zshrc'
 alias editbash='vim ~/.bashrc; source ~/.bashrc'
@@ -118,5 +121,12 @@ fdo() {
   print -s "$* $file"
   $* $file
 }
+
+#CAPSLOCK IS FOR SUCKERS
+MODMAP=`whereis xmodmap | awk '{print $2}'`
+if [[ -n "$MODMAP" ]]; then
+  xmodmap -e 'keycode 66 = F1'
+  xmodmap -e 'clear Lock'
+fi
 
 source ~/.profile
