@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/twst/.config/nvim'
 let g:netrw_dirhist_2='/home/twst/twist_data/projects/rc_lib'
 let g:netrw_dirhist_3='/home/twst/twist_data/projects/schrank-sofort/schrank/assets/ckeditor/_source/plugins/popup'
+let g:netrw_dirhist_4='/home/twst/.crawl/saves'
+let g:netrw_dirhist_5='/home/twst/rb/ftp_log_2017-04-03(1)'

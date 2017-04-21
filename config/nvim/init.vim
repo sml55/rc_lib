@@ -40,10 +40,8 @@ set nowritebackup
 "------------------------------------------------------------------------------------------------------
 "
 
-let mapleader = ","
+let mapleader = "^"
 
-map <right> :bn<cr>
-map <left> :bp<cr>
 
 " remap j and k to scroll by visual lines not "physical" lines
 nnoremap j gj
@@ -56,6 +54,17 @@ inoremap kj <Esc>
 " buffer traversal
 nnoremap <C-P> :bp <CR>     "previous buffer
 nnoremap <C-N> :bn <CR>     "next buffer
+
+map <right> :bn<cr>
+map <left> :bp<cr>
+
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+
+map <space> <PageDown>
+map <S-space> <PageUp>
 
 " since C-a is my prefix for tmux, i have to remap these
 nn <C-i> <C-a>
